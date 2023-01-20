@@ -4,7 +4,6 @@ import sys
 import time
 
 import telegram.ext as tg
-from aiohttp import ClientSession
 from pyrogram import Client, errors
 from telethon import TelegramClient
 from telethon.sessions import MemorySession, StringSession
@@ -153,7 +152,6 @@ DEV_USERS.add(OWNER_ID)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 dispatcher = updater.dispatcher
-aiohttpsession = ClientSession()
 
 # Initialize bots
 pbot = Client("eris", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
