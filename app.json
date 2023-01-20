@@ -1,0 +1,158 @@
+{
+   "name" : "Eris bot",
+   "repository": "https://github.com/Soumyabrata-eng/Subhra-Chatterjee",
+    "keywords": [
+      "telegram",
+      "advanced",
+      "group",
+      "manager"
+   ],
+   "stack": "heroku-22",
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "description": "An Anime themed Telegram group management bot.",
+   "env": {
+      "ALLOW_EXCL": {
+         "description": "Set this to True if you want ! to be a command prefix along with /",
+         "value": "True"
+      },
+      "API_ID": {
+         "description": "Go to my.telegram.org/auth",
+         "value": "",
+         "required" : true
+      },
+      "API_HASH": {
+         "description": "Go to my.telegram.org/auth",
+         "value": "",
+         "required" : true
+      },
+      "BAN_STICKER": {
+         "description": "ID of the sticker you want to use when banning people.",
+         "required": false,
+         "value": ""
+      },
+      "DEL_CMDS": {
+         "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
+         "value": "True"
+      },
+      "STRING_SESSION": {
+         "description": "Fill it with pyrogram or telethon string session.",
+         "required": true,
+         "value": "STRING_SESSION"
+      },
+      "DONATION_LINK": {
+         "description": "Optional: Don't remove the below link.",
+         "required": false,
+         "value": "https://www.buymeacoffee.com/htcworld"
+      },
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables.",
+         "value": "ANYTHING"
+      },
+      "SUPPORT_CHAT": {
+         "description": "Without @",
+         "value": "ANYTHING",
+         "required" : false
+      },
+      "DATABASE_URL": {
+         "description": "Your postgres sql db, empty this field if you dont have one.",
+         "required": true,
+         "value": "sqldbtype://username:pw@hostname:port/db_name"
+      },      
+      "OWNER_ID": {
+         "description": "Your user ID as an integer.",
+         "value": "792109647",
+         "required" : true
+      },
+      "OWNER_USERNAME": {
+         "description": "Your username",
+         "value": "SubhraChatterjee", 
+         "required" : true
+      },
+      "DEV_USERS": {
+         "description": "ID of users who are Dev (can use /py etc.)",
+         "required": false,
+         "value": "660565862 792109647"
+      },
+      "ASSISTANT_ID": {
+         "description": "Your MUSIC BOT ASSISTANT ID boii",
+         "required": true,
+         "value": "792109647"
+      },
+      "EVENT_LOGS": {
+         "description": "Gban log channel, include the hyphen too: ex: -123456",
+         "value": "-123",
+         "required" : false
+      },
+      "CASH_API_KEY": {
+         "description": "Required for currency converter",
+         "value": "-xyz",
+         "required" : false
+      },
+      "TIME_API_KEY": {
+         "description": "Required for timezone information",
+         "value": "-xyz",
+         "required" : false
+      },
+      "WEATHER_API": {
+         "description": "Required for weather information",
+         "value": "-xyz",
+         "required" : false
+      },
+      "PORT": {
+         "description": "Port to use for your webhooks.",
+         "required": false,
+         "value": ""
+      },
+      "STRICT_GBAN": {
+         "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+         "value": "True"
+      },
+      "DRAGONS": {
+         "description": "A space separated list of user IDs who you want to assign as sudo users.",
+         "required": false,
+         "value": "459034222 189005567 660565862 346981140 367222759"
+      },
+      "DEMONS": {
+         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
+         "required": false,
+         "value": "615304572"
+      },
+      "TIGERS": {
+         "description": "A space separated list of user IDs who you wanna assign as tigers.",
+         "required": false,
+         "value": ""
+      },
+      "TOKEN": {
+         "description": "Your bot token.",
+         "required": true,
+         "value": ""
+      },
+      "URL": {
+         "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
+         "required": false,
+         "value": ""
+      },
+      "SPAMWATCH_API_KEY": {
+         "description": "Spam watch your groups noob !",
+         "required": false,
+         "value": ""
+      },
+      "WEBHOOK": {
+         "description": "Setting this to ANYTHING will enable webhooks.",
+         "required": false,
+         "value": ""
+      },
+      "WOLVES": {
+         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "required": false,
+         "value": ""
+      }
+   }
+}
