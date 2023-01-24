@@ -172,19 +172,18 @@ def info(update: Update, context: CallbackContext):
                 pic = user.photo.big_file_id
                 pfp = bot.get_file(pic).download(out=BytesIO())
                 pfp.seek(0)
-                message.reply_document(
-                        document=pfp,
-                        filename=f'{user.id}.jpg',
+                message.reply_photo(
+                        pfp,
                         caption=text,
                         parse_mode=ParseMode.HTML,
                 )
+                
             except AttributeError:  # AttributeError means no chat pic so just send text
                 message.reply_text(
-                        text,
-                        parse_mode=ParseMode.HTML,
-                        disable_web_page_preview=True,
+                        text, parse_mode=ParseMode.HTML, disable_web_page_preview=True,
                 )
-        else:
+                
+        else:   # If the user ask /info in pm
             try:
                 profile = bot.get_user_profile_photos(user.id).photos[0][-1]
                 _file = bot.get_file(profile["file_id"])
@@ -192,14 +191,13 @@ def info(update: Update, context: CallbackContext):
                 _file = _file.download(out=BytesIO())
                 _file.seek(0)
 
-                message.reply_document(
-                        document=_file,
-                        caption=(text),
+                message.reply_photo(
+                        _file,
+                        caption=text,
                         parse_mode=ParseMode.HTML,
                 )
 
-            # Incase user don't have profile pic, send normal text
-            except IndexError:
+            except IndexError:   # Incase user don't have profile pic, send normal text
                 message.reply_text(
                         text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
                 )
@@ -233,8 +231,10 @@ def get_user_info(chat: Chat, user: User) -> str:
         text += f"\nLast Name: {html.escape(user.last_name)}"
     if user.username:
         text += f"\nUsername: @{html.escape(user.username)}"
+        
     text += f"\nPermanent user link: {mention_html(user.id, 'link')}"
     num_chats = sql.get_user_num_chats(user.id)
+    
     text += f"\n<b>Chat count</b>: <code>{num_chats}</code>"
     if user.id == OWNER_ID:
         text += "The disaster level of this person is God."
