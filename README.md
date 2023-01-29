@@ -8,7 +8,6 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2344114c48e543559ba1479516b9e5cf)](https://www.codacy.com/gh/Soumyabrata-edu/erisnew/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Soumyabrata-edu/erisnew&amp;utm_campaign=Badge_Grade)
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Eris's+Repo!;A+simple+group+modular+bot!;with+all+features!)
 
 An anime theme group manager with all features based on pyrogram and python Go Wrapper.
