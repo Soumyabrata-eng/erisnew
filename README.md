@@ -18,10 +18,16 @@ Can be found on telegram as [Eris](https://t.me/ErisRobot_bot).
 > For music bot, kindly do the changes on <i>_init.py</i> and <i>sample_config.py</i> 
 
 ## Deploy
+<details> 
+   <summary> ### Deploy through Heroku</summary>
+   <p> Click the below svg button to deploy. <br/>
+   <a href="https://www.freeplayus.in/p/repository-cloner.html"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a> </p>
+</details>
+<details> 
+   <summary> ### Deploy through VPS </summary>
+   <p>  </p>
+</details>
 
-The easiest way to deploy bot is through Heroku.
-
-<a href="https://www.freeplayus.in/p/repository-cloner.html"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
 
 ## Credits
 The bot is based of on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars). <br>
